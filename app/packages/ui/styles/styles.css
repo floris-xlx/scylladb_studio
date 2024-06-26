@@ -1,0 +1,104 @@
+:root {
+/* new dark light mode brand colors */
+  --text-primary: #000;
+  --text-primary-secondary: #4f4f4f;
+  --text-primary-accent: #8f8d8d;
+  --text-primary-accent-secondary: #a7a7a7;
+  --text-primary-secondary-hover: #8f8d8d;
+  --background-skeleton: #ececec;
+  --button-color-naked: #ffffff;
+  --button-text-primary: #414141;
+  --background-color: #fafafa;
+  --bg-secondary: #e9e7e7;
+  --background-secondary: #ffffff;
+  --background-hover: #eeeded;
+  --background-hover-secondary: #dad8d8;
+  --border border-primary: #e1e4e8;
+  --border border-primary-secondary: #e1e4e8;
+  --hover-color: #f5f3f3;
+  --button-hover-color: #f5f3f3;
+  --brand-purple: #9333ea;
+  --brand-purple-disabled: #b78edd;
+  --brand-purple-secondary: #721ac5;
+  --input-field: #f4f4f5;
+  --icon-color: #414141;
+  --nextui-spacing-unit-10: 10px;
+  --nextui-background:  #fafafa;
+  --nextui-default-foreground:#9333ea;
+  --tw-ring-color: transparent;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+/* Define dark theme variables */
+[data-theme='dark'] {
+  --text-primary: #fff;
+  --text-primary-secondary: #cac8c8;
+  --text-primary-accent: #a7a5a5;
+  --text-primary-accent-secondary: #858484;
+  --text-primary-secondary-hover: #b6b4b4;
+  --background-skeleton: #343438;
+  --button-color-naked: #14171a;
+  --button-text-primary: #e0e0e0;
+  --background-color: #111113;
+  --bg-secondary: #2f2f33;
+  --background-secondary: #2f3641;
+  --background-hover: #252930;
+  --background-hover-secondary: #1f1f23;
+  --border border-primary: #414040;
+  --border border-primary-secondary: #313131;
+  --hover-color: #2a2f38;
+  --button-hover-color: #464950;
+  --brand-purple: #9333ea;
+  --brand-purple-disabled: #8448bd;
+  --brand-purple-secondary: #721ac5;
+  --input-field: #27272a;
+  --icon-color: #e0e0e0;
+  --nextui-default-foreground:#9333ea;
+  --nextui-background:  #fafafa;
+  --tw-ring-color: transparent ;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--text-primary);
+    font-family: 'Inter-Regular', sans-serif;
+  }
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 2;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-primary-secondary);
+}

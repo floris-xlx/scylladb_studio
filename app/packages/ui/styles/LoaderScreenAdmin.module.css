@@ -1,0 +1,26 @@
+.PageWrapper {
+    height: 5vh;
+
+    position: relative;
+
+}
+
+.PurpleLoadingLine {
+    background-color: #703df1;
+    height: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px #703df1;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
