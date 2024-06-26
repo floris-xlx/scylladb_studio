@@ -1,17 +1,19 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Combobox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
-import { GetAllStrategyNamesById } from "@/app/packages/supabase/SupabaseUserData.js";
-import { useRequireAuth } from "@/app/auth/hooks/useRequireAuth";
 
 import pairnames from "@/app/packages/workerdata/pairnames.js";
 
-export default function Example({ 
+export default function Example({
   label,
-  setPairname, 
-  preloadedPairname
+  setPairname,
+  preloadedPairname,
+  prefix = null
 }) {
-  const { userId } = useRequireAuth();
+  const modifiedPrefix = prefix !== null ? prefix + ': ' : ''
+
+
+
   const [query, setQuery] = useState('');
   const [strategyNames, setStrategyNames] = useState([]);
   const [isDataLoading, setIsDataLoading] = useState(true);
@@ -34,26 +36,29 @@ export default function Example({
   }, [selected, setPairname]);
 
   useEffect(() => {
-    if (userId) {
-      const fetchData = async () => {
-        try {
-          const strategyNames = await GetAllStrategyNamesById(userId);
-          setStrategyNames(strategyNames);
-          setIsDataLoading(false);
-        } catch (error) {
-          console.log("error", error);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/get-keyspaces');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-      };
-      fetchData();
-    }
-  }, [userId]);
+        const strategyNames = await response.json();
+        setStrategyNames(strategyNames);
+        setIsDataLoading(false);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchData();
+  }, []);
+
 
   const filteredPeople = query === '' ? people : people.filter((person) =>
     person.name.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''))
   );
 
   return (
-    <div>
+    <Fragment>
 
       {isDataLoading ? (
 
@@ -62,21 +67,21 @@ export default function Example({
         </div>
 
       ) : (
-        <div className="w-full mb-4">
-            <label
-              className="block text-sm font-medium text-accent mb-1"
-            >
-              {label}
-            </label>
+        <div className="w-full">
+          <label
+            className="block text-sm font-medium text-accent"
+          >
+            {label}
+          </label>
 
-  
+
           <Combobox value={selected} onChange={setSelected}>
             <div className="relative">
-              <div className="relative block w-full appearance-none rounded-md   shadow-sm focus:outline-none focus:ring-2   focus:ring-purple-600 sm:text-sm font-medium border-1 border-primary">
+              <div className="relative block w-full appearance-none rounded-md   shadow-sm focus:outline-none focus:ring-2   focus:ring-purple-600 sm:text-sm font-medium border-1 border-primary transition-background">
 
                 <Combobox.Input
                   className="appearance-none rounded-md bg-input-primary shadow-sm focus:outline-none focus:ring-2   focus:ring-indigo-500 sm:text-sm font-medium w-full h-[40px] text-accent"
-                  displayValue={(person) => preloadedPairname && !selected ? preloadedPairname : person.name}
+                  displayValue={(person) => `${modifiedPrefix ? modifiedPrefix : ''}${preloadedPairname && !selected ? preloadedPairname : person.name}`}
                   onChange={(event) => {
                     setQuery(event.target.value);
                     setPairname(event.target.value);
@@ -115,7 +120,7 @@ export default function Example({
                           <>
                             <span
                               className={`block truncate  ${selected ? 'font-normal no-underline ' : 'font-normal no-underline text-accent'
-                                }`}z
+                                }`} z
                             >
                               {person.name}
                             </span>
@@ -138,6 +143,6 @@ export default function Example({
           </Combobox>
         </div>
       )}
-    </div>
+    </Fragment>
   )
 }

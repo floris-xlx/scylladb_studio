@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import LoginButton from '@/app/components/ui/Buttons/LoginButton';
-import ThemeButton from '@/app/components/ui/Theme/ThemeButton';
-import ButtonIcon from '@/app/components/ui/Buttons/ButtonIcon';
+import LoginButton from '@/app/packages/ui/Buttons/LoginButton';
+import ThemeButton from '@/app/packages/ui/Theme/ThemeButton';
+import ButtonIcon from '@/app/packages/ui/Buttons/ButtonIcon';
 import {
     MagnifyingGlassIcon,
     ShoppingCartIcon,
     SunIcon,
     MoonIcon,
 } from '@heroicons/react/24/outline';
-import { getTheme, setTheme } from "@/app/client/hooks/darkmode/DarkModeCookie.js";
-import GoBackButton from '@/app/components/ui/Navigators/GoBackButton';
+import { getTheme, setTheme } from "@/app/packages/hooks/darkmode/DarkModeCookie.js";
+import GoBackButton from '@/app/packages/ui/Navigators/GoBackButton';
 
 const HeaderIcons = ({
     isOpen,

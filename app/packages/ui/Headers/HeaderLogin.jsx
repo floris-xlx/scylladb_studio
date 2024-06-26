@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LoginButton from '@/app/components/ui/Buttons/LoginButton';
+import LoginButton from '@/app/packages/ui/Buttons/LoginButton';
 
 const HeaderLogin = () => {
     return (

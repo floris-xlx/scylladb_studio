@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { CrossIcon } from '@/app/components/ui/Icon';
+import { CrossIcon } from '@/app/packages/ui/Icon';
 
 const CrossButton = ({ onClick }) => {
     return (

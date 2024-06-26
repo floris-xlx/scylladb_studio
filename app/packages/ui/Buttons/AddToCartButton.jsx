@@ -1,7 +1,7 @@
 import { Spinner } from "@nextui-org/spinner";
 import Ripples from 'react-ripples'
 
-import { ShoppingCartIcon } from "@/app/components/ui/Icon";
+import { ShoppingCartIcon } from "@/app/packages/ui/Icon";
 
 const AddToCartButton = ({
     isLoading = false,

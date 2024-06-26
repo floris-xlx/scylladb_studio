@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { HeartIcon } from '@/app/components/ui/Icon';
+import { HeartIcon } from '@/app/packages/ui/Icon';
 
 const FavoriteIconButton = ({ isFavorite, setIsFavorite }) => {
 

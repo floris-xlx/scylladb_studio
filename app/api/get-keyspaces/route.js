@@ -1,4 +1,6 @@
-const pairnames = [
+import { NextResponse } from 'next/server';
+
+const keyspaces = [
     "keyspace1",
     "keyspace2",
     "keyspace3",
@@ -9,6 +11,8 @@ const pairnames = [
     "keyspace8",
     "keyspace9",
     "keyspace10"
-]
+];
 
-export default pairnames;
+export async function GET() {
+    return NextResponse.json(keyspaces);
+}

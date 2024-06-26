@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonIcon from '@/app/components/ui/Buttons/ButtonIcon';
+import ButtonIcon from '@/app/packages/ui/Buttons/ButtonIcon';
 
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 

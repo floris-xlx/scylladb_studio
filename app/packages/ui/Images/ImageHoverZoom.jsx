@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SkeletonLoader from '@/app/components/ui/Loading/SkeletonLoader';
+import SkeletonLoader from '@/app/packages/ui/Loading/SkeletonLoader';
 
 const ImageHoverZoom = ({
     image_src,

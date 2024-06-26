@@ -1,5 +1,5 @@
 import React from 'react';
-import HexToRgb from '@/app/client/hooks/formatting/HexToRgb';
+import HexToRgb from '@/app/packages/hooks/formatting/HexToRgb';
 
 const ColorObject = ({
     color,

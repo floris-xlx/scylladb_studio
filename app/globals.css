@@ -33,9 +33,9 @@
   --color-input-primary: #f3f3f3;
 
   /* Ring colors */
-  --ring-primary: #9333ea;
-  --ring-secondary: #721ac5;
-  --ring-accent: #b78edd;
+  --ring-primary: #4b4ff0;
+  --ring-secondary: #6d4dc5;
+  --ring-accent: #7e9ff7;
 
   /* skeletons */
   --color-skeleton: #eaeaea;
@@ -44,7 +44,7 @@
   --color-chart-contrast: #bdbdbd;
 
   /* Fonts */
-  --font-primary: "Inter", sans-serif;
+  --font-primary: 'Inter', sans-serif;
 
   /* Text colors */
   --color-text-primary: #000;
@@ -63,7 +63,11 @@
 
   --color-logo: #000000;
 
-  --color-backdrop: #57565671;
+  /* hero bg */
+  --xlx-hero-bg: url('/polygon_bg.svg');
+
+
+  --xlx-glass-primary: #e9e9e938;
 }
 
 .dark-theme-class {
@@ -74,7 +78,7 @@
   background-color: #fafafa;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   /* Colors */
   --color-primary: #111113;
   --color-secondary: #14171a;
@@ -105,7 +109,9 @@
 
   --color-logo: #ffffff;
 
-  --color-backdrop: #0a0a0a41;
+  /* hero bg */
+  --xlx-hero-bg: url('/dark_polygon_bg.svg');
+  --xlx-glass-primary: #00000038;
 }
 
 /* this is a mobile only border for when overlays or cards are the same color as bg */
@@ -125,7 +131,7 @@
   }
 }
 
-[type="text"]:focus,
+[type='text']:focus,
 select:focus {
   border: 1px solid var(--color-border-primary);
   outline-offset: var(--color-brand-primary) !important;
@@ -135,7 +141,7 @@ select:focus {
   outline-offset: 3px;
 }
 
-[type="text"] {
+[type='text'] {
   border: 0px solid var(--color-border-primary);
   border-radius: 6px;
 }
@@ -147,18 +153,6 @@ select:focus {
     calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
     var(--tw-shadow, 0 0 #0000);
-}
-
-p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-text-primary);
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--color-text-primary);
 }
 
 .PageWrapper {
@@ -228,15 +222,15 @@ body {
   animation: slide-out 0.5s ease-in-out forwards;
 }
 
-input[type="email"],
-input[type="password"] {
+input[type='email'],
+input[type='password'] {
   background-color: var(--color-input-primary);
   border: 1px solid var(--color-border-primary);
   color: var(--color-text-primary);
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
+input[type='email']:focus,
+input[type='password']:focus {
   box-shadow: 0 0 0 2px var(--color-brand-primary); /* Blue color with 50% opacity */
 }
 
@@ -315,7 +309,7 @@ input[type="password"]:focus {
 }
 
 .bg-default-200 {
-  background-color: var(--color-accent) !important;
+  background-color: var(--color-accent);
 }
 
 .h-fit {
@@ -501,6 +495,7 @@ element.style {
 .h-\[100dvh\] {
   height: 100dvh;
 }
+
 .z-50 {
   z-index: 50;
 }
@@ -547,7 +542,7 @@ element.style {
 /* spinner nextui */
 .border-b-warning {
   --tw-border-opacity: 1;
-  border-bottom-color: #a024f5;
+  border-bottom-color: #3d4ff7;
 }
 
 .text-foreground {
@@ -570,16 +565,12 @@ element.style {
   transform-origin: left;
 }
 
-.group[data-selected="true"] .group-data-\[selected\=true\]\:bg-primary {
-  background-color: var(--color-brand-primary) !important;
-}
-
-.group[data-selected="true"] .group-data-\[selected\=true\]\:bg-secondary {
+.group[data-selected='true'] .group-data-\[selected\=true\]\:bg-secondary {
   --tw-bg-opacity: 1;
   background-color: hsl(270 66.67% 47.06% / var(--nextui-secondary-opacity, 1));
 }
 
-.group[data-selected="true"]
+.group[data-selected='true']
   .group-data-\[selected\=true\]\:text-secondary-foreground {
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--nextui-secondary-foreground-opacity, 1));
@@ -629,15 +620,15 @@ element.style {
   height: 2rem;
 }
 
-[role="button"],
+[role='button'],
 button {
   cursor: pointer;
 }
 
 button,
-input:where([type="button"]),
-input:where([type="reset"]),
-input:where([type="submit"]) {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   appearance: button;
   background-color: transparent;
@@ -677,6 +668,7 @@ textarea {
   color: inherit;
   margin: 0;
   padding: 0;
+  border: 0px solid transparent !important;
 }
 
 /* custom breakpoint tw */
@@ -690,6 +682,52 @@ textarea {
   .mmd-grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+/* dev borders */
+.dev {
+  border: 2px solid red;
+}
+
+.dev-1 {
+  border: 2px solid blue;
+}
+
+.dev-2 {
+  border: 2px solid green;
+}
+
+.dev-3 {
+  border: 2px solid yellow;
+}
+
+.dev-4 {
+  border: 2px solid purple;
+}
+
+.dev-5 {
+  border: 2px solid orange;
+}
+
+.dev-6 {
+  border: 2px solid pink;
+}
+
+.dev-7 {
+  border: 2px solid brown;
+}
+
+.dev-8 {
+  border: 2px solid cyan;
+}
+
+li {
+  color: var(--color-text-primary) !important;
+}
+
+/* hero bg light/darkmode for hero lander */
+.xlx-hero-bg {
+  background-image: var(--xlx-hero-bg);
 }
 
 /* this is in charge of the command palette  */
@@ -802,4 +840,22 @@ span {
 /* the shadow-lg is added for an injected border to the command palette */
 .shadow-lg {
   border: 1px solid var(--color-border-primary) !important;
+}
+
+/* control the rounding hardness of the popover feedback bugReport */
+.rounded-large {
+  border-radius: 0.375rem !important;
+}
+
+/* glassmorphism */
+.glassmorphism {
+  background: var(--xlx-glass-primary);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+
+  backdrop-filter: blur(6.5px) saturate(0.7);
+  -webkit-backdrop-filter: blur(6.5px);
+}
+
+.stroke-width-1 {
+  stroke-width: 1 !important;
 }

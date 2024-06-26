@@ -4,11 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { Popover, PopoverTrigger, PopoverContent, Button } from "@nextui-org/react";
 import { BugAntIcon } from "@heroicons/react/24/outline";
 
-import ButtonTransparentHover from '@/app/components/ui/Buttons/ButtonTransparentHover';
+import ButtonTransparentHover from '@/app/packages/ui/Buttons/ButtonTransparentHover';
 
 
 // import the reporting function
-import sendBugReport from '@/app/client/hooks/BugReport';
+import sendBugReport from '@/app/packages/hooks/BugReport';
 
 const BugReport = ({
 

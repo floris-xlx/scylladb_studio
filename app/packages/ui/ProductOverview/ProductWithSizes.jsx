@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import BreadCrumbs from '@/app/components/ui/Breadcrumbs/Breadcrumbs';
-import ImageGrayBg from '@/app/components/ui/Images/ImageGrayBg';
-import { TruckIcon } from '@/app/components/ui/Icon';
-import ProductSizeChip from '@/app/components/ui/Chips/ProductSizeChip';
-import FavoriteIconButton from '@/app/components/ui/Buttons/FavoriteIconButton';
-import AddToCartButton from '@/app/components/ui/Buttons/AddToCartButton';
-import ImageGrayBgLarge from '@/app/components/ui/Images/ImageGrayBgLarge';
-import ColorGroup from '@/app/components/ui/ColorPickers/ColorGroup';
+import BreadCrumbs from '@/app/packages/ui/Breadcrumbs/Breadcrumbs';
+import ImageGrayBg from '@/app/packages/ui/Images/ImageGrayBg';
+import { TruckIcon } from '@/app/packages/ui/Icon';
+import ProductSizeChip from '@/app/packages/ui/Chips/ProductSizeChip';
+import FavoriteIconButton from '@/app/packages/ui/Buttons/FavoriteIconButton';
+import AddToCartButton from '@/app/packages/ui/Buttons/AddToCartButton';
+import ImageGrayBgLarge from '@/app/packages/ui/Images/ImageGrayBgLarge';
+import ColorGroup from '@/app/packages/ui/ColorPickers/ColorGroup';
 
 import { GetShoesByBrand, GetShoeImagesByHash, GetShoePriceByHash, IsShoeInStock } from '@/app/client/supabase/SupabaseUserData';
 import { GetKeyLocalStorage, SetKeyLocalStorage } from '@/app/client/caching/LocalStorageRouter';
 
-import { SizeNotification, CartNotification } from '@/app/components/ui/Notifications/Notifications.jsx';
+import { SizeNotification, CartNotification } from '@/app/packages/ui/Notifications/Notifications.jsx';
 
 
 const ProductWithSizes = ({

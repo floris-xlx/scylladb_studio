@@ -1,12 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
 
-import CrossButton from '@/app/components/ui/Buttons/CrossButton';
-import PriceLabelShoppingCart from '@/app/components/ui/Labels/PriceLabelShoppingCart';
-import ItemLabelShoppingCart from '@/app/components/ui/Labels/ItemLabelShoppingCart';
-import SizeAndColorLabel from '@/app/components/ui/Labels/SizeAndColorLabel';
-import NoPendingTrades from '@/app/components/ui/EmptyStates/NoPendingTrades';
-import SpinnerWithLabel from '@/app/components/ui/Loading/SpinnerWithLabel';
+import CrossButton from '@/app/packages/ui/Buttons/CrossButton';
+import PriceLabelShoppingCart from '@/app/packages/ui/Labels/PriceLabelShoppingCart';
+import ItemLabelShoppingCart from '@/app/packages/ui/Labels/ItemLabelShoppingCart';
+import SizeAndColorLabel from '@/app/packages/ui/Labels/SizeAndColorLabel';
+import NoPendingTrades from '@/app/packages/ui/EmptyStates/NoPendingTrades';
+import SpinnerWithLabel from '@/app/packages/ui/Loading/SpinnerWithLabel';
 
 import { GetKeyLocalStorage, SetKeyLocalStorage } from '@/app/client/caching/LocalStorageRouter';
 import { GetShoeDataByHash, GetShoePriceByHash } from '@/app/client/supabase/SupabaseUserData';

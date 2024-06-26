@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import ProductCard from '@/app/components/ui/Cards/ProductCard';
+import ProductCard from '@/app/packages/ui/Cards/ProductCard';
 import { SetKeyLocalStorage } from '@/app/client/caching/LocalStorageRouter';
-import SkeletonProductCard from '@/app/components/ui/Loading/SkeletonProductCard';
+import SkeletonProductCard from '@/app/packages/ui/Loading/SkeletonProductCard';
 
 const ProductList = ({
     productData,

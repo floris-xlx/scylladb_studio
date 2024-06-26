@@ -1,5 +1,5 @@
 import React from 'react';
-import { RulerIcon } from '@/app/components/ui/Icon';
+import { RulerIcon } from '@/app/packages/ui/Icon';
 import toast from 'react-hot-toast';
 
 
